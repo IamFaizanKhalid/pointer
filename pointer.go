@@ -7,6 +7,15 @@ func String(v string) *string {
 	return &v
 }
 
+// OptString returns a pointer to the string value passed in or
+// nil if the string is "".
+func OptString(v string) *string {
+	if v == "" {
+		return nil
+	}
+	return &v
+}
+
 // StringValue returns the value of the string pointer passed in or
 // "" if the pointer is nil.
 func StringValue(v *string) string {
@@ -125,6 +134,15 @@ func Int(v int) *int {
 	return &v
 }
 
+// OptInt returns a pointer to the int value passed in or
+// nil if the int is 0.
+func OptInt(v int) *int {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // IntValue returns the value of the int pointer passed in or
 // 0 if the pointer is nil.
 func IntValue(v *int) int {
@@ -181,6 +199,15 @@ func IntValueMap(src map[string]*int) map[string]int {
 
 // Uint returns a pointer to the uint value passed in.
 func Uint(v uint) *uint {
+	return &v
+}
+
+// OptUint returns a pointer to the uint value passed in or
+// nil if the uint is 0.
+func OptUint(v uint) *uint {
+	if v == 0 {
+		return nil
+	}
 	return &v
 }
 
@@ -243,6 +270,15 @@ func Int8(v int8) *int8 {
 	return &v
 }
 
+// OptInt8 returns a pointer to the int8 value passed in or
+// nil if the int8 is 0.
+func OptInt8(v int8) *int8 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Int8Value returns the value of the int8 pointer passed in or
 // 0 if the pointer is nil.
 func Int8Value(v *int8) int8 {
@@ -299,6 +335,15 @@ func Int8ValueMap(src map[string]*int8) map[string]int8 {
 
 // Int16 returns a pointer to the int16 value passed in.
 func Int16(v int16) *int16 {
+	return &v
+}
+
+// OptInt16 returns a pointer to the int16 value passed in or
+// nil if the int16 is 0.
+func OptInt16(v int16) *int16 {
+	if v == 0 {
+		return nil
+	}
 	return &v
 }
 
@@ -361,6 +406,15 @@ func Int32(v int32) *int32 {
 	return &v
 }
 
+// OptInt32 returns a pointer to the int32 value passed in or
+// nil if the int32 is 0.
+func OptInt32(v int32) *int32 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Int32Value returns the value of the int32 pointer passed in or
 // 0 if the pointer is nil.
 func Int32Value(v *int32) int32 {
@@ -417,6 +471,15 @@ func Int32ValueMap(src map[string]*int32) map[string]int32 {
 
 // Int64 returns a pointer to the int64 value passed in.
 func Int64(v int64) *int64 {
+	return &v
+}
+
+// OptInt64 returns a pointer to the int value passed in or
+// nil if the int64 is 0.
+func OptInt64(v int64) *int64 {
+	if v == 0 {
+		return nil
+	}
 	return &v
 }
 
@@ -479,6 +542,15 @@ func Uint8(v uint8) *uint8 {
 	return &v
 }
 
+// OptUint8 returns a pointer to the int8 value passed in or
+// nil if the uint8 is 0.
+func OptUint8(v uint8) *uint8 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Uint8Value returns the value of the uint8 pointer passed in or
 // 0 if the pointer is nil.
 func Uint8Value(v *uint8) uint8 {
@@ -535,6 +607,15 @@ func Uint8ValueMap(src map[string]*uint8) map[string]uint8 {
 
 // Uint16 returns a pointer to the uint16 value passed in.
 func Uint16(v uint16) *uint16 {
+	return &v
+}
+
+// OptUint16 returns a pointer to the int16 value passed in or
+// nil if the uint16 is 0.
+func OptUint16(v uint16) *uint16 {
+	if v == 0 {
+		return nil
+	}
 	return &v
 }
 
@@ -597,6 +678,15 @@ func Uint32(v uint32) *uint32 {
 	return &v
 }
 
+// OptUint32 returns a pointer to the int32 value passed in or
+// nil if the uint32 is 0.
+func OptUint32(v uint32) *uint32 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Uint32Value returns the value of the uint32 pointer passed in or
 // 0 if the pointer is nil.
 func Uint32Value(v *uint32) uint32 {
@@ -653,6 +743,15 @@ func Uint32ValueMap(src map[string]*uint32) map[string]uint32 {
 
 // Uint64 returns a pointer to the uint64 value passed in.
 func Uint64(v uint64) *uint64 {
+	return &v
+}
+
+// OptUint64 returns a pointer to the int64 value passed in or
+// nil if the uint64 is 0.
+func OptUint64(v uint) *uint {
+	if v == 0 {
+		return nil
+	}
 	return &v
 }
 
@@ -715,6 +814,15 @@ func Float32(v float32) *float32 {
 	return &v
 }
 
+// OptFloat32 returns a pointer to the float32 value passed in or
+// nil if the float32 is 0.
+func OptFloat32(v float32) *float32 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Float32Value returns the value of the float32 pointer passed in or
 // 0 if the pointer is nil.
 func Float32Value(v *float32) float32 {
@@ -774,6 +882,15 @@ func Float64(v float64) *float64 {
 	return &v
 }
 
+// OptFloat64 returns a pointer to the float64 value passed in or
+// nil if the float64 is 0.
+func OptFloat64(v float64) *float64 {
+	if v == 0 {
+		return nil
+	}
+	return &v
+}
+
 // Float64Value returns the value of the float64 pointer passed in or
 // 0 if the pointer is nil.
 func Float64Value(v *float64) float64 {
@@ -830,6 +947,16 @@ func Float64ValueMap(src map[string]*float64) map[string]float64 {
 
 // Time returns a pointer to the time.Time value passed in.
 func Time(v time.Time) *time.Time {
+	return &v
+}
+
+// OptTime returns a pointer to the time.Time value passed in or
+// nil if the time.Time is zero.
+func OptTime(v time.Time) *time.Time {
+	z := time.Time{}
+	if v == z {
+		return nil
+	}
 	return &v
 }
 
