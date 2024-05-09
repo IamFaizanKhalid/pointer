@@ -1,6 +1,35 @@
 package pointer
 
-import "time"
+import (
+	"reflect"
+	"time"
+)
+
+// P returns a pointer to the value passed in.
+func P[T any](v T) *T {
+	return &v
+}
+
+// Opt returns a pointer to the value passed in or
+// nil if the value is a zero value.
+func Opt[T any](v T) *T {
+	if reflect.ValueOf(v).IsZero() {
+		return nil
+	}
+
+	return &v
+}
+
+// Value returns the value of the pointer passed in or
+// the zero value if the pointer is nil.
+func Value[T any](v *T) T {
+	if v == nil {
+		var zero T
+		return zero
+	}
+
+	return *v
+}
 
 // String returns a pointer to the string value passed in.
 func String(v string) *string {
